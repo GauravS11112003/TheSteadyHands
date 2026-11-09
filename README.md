@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/hero.gif" alt="The ghost attending: life-size holographic hands place a stitch on the patient while a 3D skin cross-section traces the needle's path above the wound" width="100%">
+<img src="docs/assets/hero.gif" alt="The ghost attending: life-size holographic hands place a stitch on the patient while a 3D skin cross-section traces the needle's path above the wound" width="560">
 
 # The Steady Hands
 
@@ -36,47 +36,45 @@ The flow follows a real closure: **rehearse → mark → close.** One next step 
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="55%" valign="top">
 
 ### 1. Rehearse with the ghost attending
-Life-size holographic hands reach in from across the table and place one interrupted stitch:
+Life-size holographic hands reach in from across the table and place one interrupted stitch: the forceps evert the far edge, the needle enters at 90°, the wrist pronates through the needle's curve, and the thread is pulled through.
 
-- the forceps evert the far edge;
-- the needle enters at 90° and the wrist pronates through the needle's curve;
-- the thread is pulled through.
-
-Above the wound, a **3× anatomical cutaway** (epidermis, dermis, fat, fascia, muscle) traces the same path from inside the tissue.
-
-Then it's your turn. You drag the needle along the arc, through a visible tolerance band.
+Above the wound, a **3× anatomical cutaway** (epidermis, dermis, fat, fascia, muscle) traces the same path from inside the tissue. Then it's your turn: you drag the needle along the arc, through a visible tolerance band.
 
 </td>
-<td width="50%"><img src="docs/assets/ghost-attending.jpg" alt="Cyan holographic hands holding a needle driver and forceps over the incision, with the 3D skin cross-section above"></td>
+<td width="45%" valign="middle"><img src="docs/assets/ghost-attending.jpg" width="380" alt="Cyan holographic hands holding a needle driver and forceps over the incision, with the 3D skin cross-section above"></td>
 </tr>
 <tr>
-<td width="50%"><img src="docs/assets/marking.jpg" alt="Glowing bite marks along the incision with the needle counter panel and a '6.0 cm → 11 sutures' label"></td>
-<td width="50%" valign="top">
+<td width="45%" valign="middle"><img src="docs/assets/marking.jpg" width="380" alt="Glowing bite marks along the incision with the needle counter panel and a '6.0 cm → 11 sutures' label"></td>
+<td width="55%" valign="top">
 
 ### 2. Mark the wound
-Pinch both ends of the incision. A millimetre ruler draws itself along the cut, and glowing bite marks cascade into place, 5 mm from each edge and evenly spaced:
-
-$$n = \operatorname{round}\left(\frac{L}{0.5\ \text{cm}}\right) - 1,\qquad \mathbf{x}_i = \mathbf{A} + \frac{i}{n+1}(\mathbf{B}-\mathbf{A})$$
+Pinch both ends of the incision. A millimetre ruler draws itself along the cut, and glowing bite marks cascade into place, 5 mm from each edge and evenly spaced.
 
 A 6.0 cm cut reads **6.0 cm → 11 sutures**. A slightly imperfect pinch still rounds to 11.
 
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
+<td width="55%" valign="top">
 
 ### 3. Close, with nothing left behind
-- **Count the needles:** pinch **+** when a needle is opened and **−** when it comes back.
-- **Missing needle:** press *Close* with one still out, and the field answers with a red **"1 missing"**, a low chime, and chevrons pointing back to the instrument tray.
-- **At zero:** the sutures light up green one after another, a ring wave rolls across the field, and it reads **Closed**.
+Pinch **+** when a needle is opened and **−** when it comes back.
+
+Press *Close* with one still out, and the field answers with a red **"1 missing"**, a low chime, and chevrons pointing back to the instrument tray.
+
+At zero, the sutures light up green one after another, a ring wave rolls across the field, and it reads **Closed**.
 
 </td>
-<td width="50%"><img src="docs/assets/closing.gif" alt="Needle counter going 1, 2, 1, the missing-needle alert, then the green Closed panel with a ring wave"></td>
+<td width="45%" valign="middle"><img src="docs/assets/closing.gif" width="380" alt="Needle counter going 1, 2, 1, the missing-needle alert, then the green Closed panel with a ring wave"></td>
 </tr>
 </table>
+
+**The suture maths.** For a marked length $L$ between the pinched ends $\mathbf{A}$ and $\mathbf{B}$:
+
+$$n = \text{round}\left(\frac{L}{0.5\ \text{cm}}\right) - 1, \qquad \mathbf{x}_i = \mathbf{A} + \frac{i}{n+1}\left(\mathbf{B}-\mathbf{A}\right)$$
 
 ---
 
@@ -92,8 +90,8 @@ $$d_{\max} \le 1.5\ \text{mm}\ \ (= 4.5\ \text{mm at } 3\times), \qquad \left|\t
 
 <table>
 <tr>
-<td width="50%"><img src="docs/assets/score-pass.jpg" alt="Pass: mint thread inside the tolerance band, check badge reading 0.0 mm · 90°"></td>
-<td width="50%"><img src="docs/assets/score-fail.jpg" alt="Fail: thread leaving the tolerance band in coral, cross badge reading 2.6 mm · 94°"></td>
+<td width="50%"><img src="docs/assets/score-pass.jpg" width="400" alt="Pass: mint thread inside the tolerance band, check badge reading 0.0 mm · 90°"></td>
+<td width="50%"><img src="docs/assets/score-fail.jpg" width="400" alt="Fail: thread leaving the tolerance band in coral, cross badge reading 2.6 mm · 94°"></td>
 </tr>
 <tr>
 <td align="center"><b>Pass:</b> 0.0 mm off the arc, entry at 90°</td>
@@ -115,12 +113,12 @@ A gloved user hand follows every pinch and drag, so you can see who is working.
 
 <table>
 <tr>
-<td width="50%"><img src="docs/assets/operating-room.jpg" alt="Wide view of the operating room: surgical lamps, monitor, the patient on the table"></td>
-<td width="50%"><img src="docs/assets/establishing.jpg" alt="Three-quarter view of the patient, the Mayo tray and the anaesthesia screen"></td>
+<td width="50%"><img src="docs/assets/operating-room.jpg" width="400" alt="Wide view of the operating room: surgical lamps, monitor, the patient on the table"></td>
+<td width="50%"><img src="docs/assets/establishing.jpg" width="400" alt="Three-quarter view of the patient, the Mayo tray and the anaesthesia screen"></td>
 </tr>
 <tr>
-<td width="50%"><img src="docs/assets/practice.jpg" alt="The gloved user hand dragging the needle on the 3D cross-section"></td>
-<td width="50%"><img src="docs/assets/missing-needle.jpg" alt="Needle counter with the coral missing-needle alert and chevrons toward the instrument tray"></td>
+<td width="50%"><img src="docs/assets/practice.jpg" width="400" alt="The gloved user hand dragging the needle on the 3D cross-section"></td>
+<td width="50%"><img src="docs/assets/missing-needle.jpg" width="400" alt="Needle counter with the coral missing-needle alert and chevrons toward the instrument tray"></td>
 </tr>
 </table>
 
