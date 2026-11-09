@@ -143,14 +143,14 @@ Every done criterion in the [design brief](devpost/design-brief.md) is covered b
 
 ```mermaid
 flowchart LR
-    I[Pinch · drag<br/>SIK + UI Kit] --> M[SteadyHandsMain<br/>rehearse → mark → close]
-    F[SteadyHandsMath<br/>pure scoring + suture math] --- M
-    M --> G[Ghost attending<br/>skinned hologram hands + instruments]
-    M --> X[3× cross-section<br/>tolerance band · protractor · badges]
-    M --> P[Wound overlays<br/>bite marks · ruler · pinch rings]
-    M --> C[Closing controls<br/>needle count · alert · Closed]
-    S[Stand-in world<br/>OR · patient · tray] -.preview only.- M
-    L[LEAF · 17 scenarios] -.drives the real input path.-> I
+    I["Pinch / drag<br/>SIK + UI Kit"] --> M["SteadyHandsMain<br/>rehearse, mark, close"]
+    F["SteadyHandsMath<br/>pure scoring and suture maths"] --- M
+    M --> G["Ghost attending<br/>skinned hologram hands"]
+    M --> X["3x cross-section<br/>tolerance band and badges"]
+    M --> P["Wound overlays<br/>bite marks, ruler, pinch rings"]
+    M --> C["Closing controls<br/>needle count, alert, Closed"]
+    S["Stand-in world<br/>OR, patient, tray"] -. preview only .- M
+    L["LEAF: 17 scenarios"] -. drives the real input path .-> I
 ```
 
 - **Logic stays separate from the visuals.** One flow controller exposes readable state. The scoring and suture maths are pure functions. Each visual layer sits behind a stable contract, which let the whole look be rebuilt twice without breaking a test.
