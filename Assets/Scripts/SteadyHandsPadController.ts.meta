@@ -1,0 +1,82 @@
+- !<AssetImportMetadata/2feb4a03-bea0-46e2-bf1c-c3a800993326>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e5e8fc61-538e-4d32-bce8-e7e846ef8a04
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e5e8fc61-538e-4d32-bce8-e7e846ef8a04
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f4cc498a-acd3-46c5-85ab-ee1c822add58
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f4cc498a-acd3-46c5-85ab-ee1c822add58>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 8305d866-1b42-4e59-9a41-f780b98bb970
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    biteMarksRoot: false
+    debugColliders: false
+    dotColor: false
+    dotDiameterMm: false
+    edgeOffsetCm: false
+    ghostStitchRoot: false
+    padSizeCm: false
+    pinchMarkerA: false
+    pinchMarkerB: false
+    ringColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - pinchMarkerA: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      pinchMarkerB: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      biteMarksRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      ghostStitchRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      padSizeCm: !<Vec3> {x: 15.000000, y: 1.000000, z: 10.000000}
+      dotColor: !<Vec4> {x: 0.150000, y: 1.000000, z: 1.000000, w: 1.000000}
+      ringColor: !<Vec4> {x: 0.750000, y: 1.000000, z: 1.000000, w: 1.000000}
+      edgeOffsetCm: 0.500000
+      dotDiameterMm: !<float> 2.000000
+      debugColliders: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">SteadyHandsPadController – suture pad, pinches, bite marks</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject pinchMarkerA {"hint":"Authored holder for the first pinch marker (child of this pad)"}'
+    - '// @input SceneObject pinchMarkerB {"hint":"Authored holder for the second pinch marker (child of this pad)"}'
+    - "// @input SceneObject biteMarksRoot {\"hint\":\"Authored root the bite marks are built under (on the pad's top surface)\"}"
+    - "// @input SceneObject ghostStitchRoot {\"hint\":\"Authored root for the ghost attending's demo stitch (pad centre, top surface)\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input vec3 padSizeCm = "{15,1,10}" {"hint":"Pad size in cm (width X, thickness Y, depth Z) — the skin top is at y = thickness / 2"}'
+    - '// @input vec4 dotColor = "{0.35,0.9,1,1}" {"hint":"Bite-mark bead colour (luminous ice-cyan reads on the additive display)", "widget":"color"}'
+    - '// @input vec4 ringColor = "{0.62,0.95,1,1}" {"hint":"Pinch-marker / reticle colour", "widget":"color"}'
+    - '// @input float edgeOffsetCm = 0.5 {"hint":"Distance of each bite dot from the cut edge, cm (brief: 5 mm)", "widget":"slider", "min":0.2, "max":1, "step":0.05}'
+    - '// @input float dotDiameterMm = 2 {"hint":"Bite-mark bead diameter, mm (brief: about 2 mm)", "widget":"slider", "min":1, "max":5, "step":0.5}'
+    - '// @input bool debugColliders {"hint":"Debug: wireframe the pad collider"}'
+    - '// @ui {"widget":"group_end"}'

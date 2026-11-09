@@ -1,0 +1,466 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 10
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 0.0, 0.0, 0.0]
+        Group:
+          String: Halo
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: level
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Level
+      PositionX: -480
+      PositionY: -300
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Level
+    Node1:
+      DependencyIndex: 1
+      LevelID: 11
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 3
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.55, 0.92, 1.0, 1.0]
+        Group:
+          String: Halo
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: haloColor
+        SortIndex:
+          Variable: 1
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Halo Color
+      PositionX: -480
+      PositionY: -230
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Halo Color
+    Node2:
+      DependencyIndex: 2
+      LevelID: 12
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.55, 0.0, 0.0, 0.0]
+        Group:
+          String: Halo
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: haloIntensity
+        SortIndex:
+          Variable: 2
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Halo Intensity
+      PositionX: -480
+      PositionY: -160
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Halo Intensity
+    Node3:
+      DependencyIndex: 3
+      LevelID: 13
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.6, 0.0, 0.0, 0.0]
+        Group:
+          String: Halo
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: haloPower
+        SortIndex:
+          Variable: 3
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Halo Power
+      PositionX: -480
+      PositionY: -90
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Halo Power
+    Node4:
+      DependencyIndex: 4
+      LevelID: 14
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.35, 0.0, 0.0, 0.0]
+        Group:
+          String: Halo
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: haloWidth
+        SortIndex:
+          Variable: 4
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Halo Width (cm)
+      PositionX: -480
+      PositionY: -20
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Halo Width (cm)
+    Node5:
+      DependencyIndex: 5
+      LevelID: 15
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, -69.0, -45.0, 0.0]
+        Group:
+          String: Fade
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeCenter
+        SortIndex:
+          Variable: 5
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Fade Center (world)
+      PositionX: -480
+      PositionY: 50
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Fade Center (world)
+    Node6:
+      DependencyIndex: 6
+      LevelID: 16
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1000.0, 0.0, 0.0, 0.0]
+        Group:
+          String: Fade
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeNear
+        SortIndex:
+          Variable: 6
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Fade Near (cm)
+      PositionX: -480
+      PositionY: 120
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Fade Near (cm)
+    Node7:
+      DependencyIndex: 7
+      LevelID: 17
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [2000.0, 0.0, 0.0, 0.0]
+        Group:
+          String: Fade
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeFar
+        SortIndex:
+          Variable: 7
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Fade Far (cm)
+      PositionX: -480
+      PositionY: 190
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Fade Far (cm)
+    Node8:
+      DependencyIndex: 8
+      LevelID: 18
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Group:
+          String: Fade
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: clipPlane
+        SortIndex:
+          Variable: 8
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Clip Plane (n.xyz, d)
+      PositionX: -480
+      PositionY: 260
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Clip Plane (n.xyz, d)
+    Node9:
+      DependencyIndex: 9
+      LevelID: 100
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_float haloWidth;
+            output_vec3 inflated;
+            
+            void main()
+            {
+            	vec3 P = system.getSurfacePositionWorldSpace();
+            	vec3 N = normalize(system.getSurfaceNormalWorldSpace());
+            	inflated = P + N * haloWidth;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        ID:
+          Variable: 0
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 0
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Halo Inflate
+        UseExternalFile:
+          Variable: false
+        haloWidth:
+          Connection0:
+            NodeLevelID: 14
+            PortID: Output
+          Variable: 0.0
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        inflated:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: -60
+      PositionY: -120
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Halo Inflate
+    Node10:
+      DependencyIndex: 10
+      LevelID: 101
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_float level;
+            input_vec3 haloColor;
+            input_float haloIntensity;
+            input_float haloPower;
+            input_vec3 fadeCenter;
+            input_float fadeNear;
+            input_float fadeFar;
+            input_vec4 clipPlane;
+            output_vec4 result;
+            
+            void main()
+            {
+            	vec3 P = system.getSurfacePositionWorldSpace();
+            	vec3 N = normalize(system.getSurfaceNormalWorldSpace());
+            	vec3 V = normalize(system.getCameraPosition() - P);
+            	float f = clamp(abs(dot(N, V)), 0.0, 1.0);
+            	// Soft ring: zero at the shell's outer edge, peaks just inside it, fades toward the middle.
+            	float g = pow(1.0 - f, haloPower) * smoothstep(0.0, 0.3, f);
+            	float fade = 1.0 - smoothstep(fadeNear, fadeFar, distance(P, fadeCenter));
+            	float keep = step(0.0, dot(clipPlane.xyz, P) + clipPlane.w);
+            	float k = clamp(level, 0.0, 1.0) * fade * keep * haloIntensity;
+            	result = vec4(haloColor * g * k, 0.0);
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        ID:
+          Variable: 0
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Halo Glow
+        UseExternalFile:
+          Variable: false
+        level:
+          Connection0:
+            NodeLevelID: 10
+            PortID: Output
+          Variable: 0.0
+        haloColor:
+          Connection0:
+            NodeLevelID: 11
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0]
+        haloIntensity:
+          Connection0:
+            NodeLevelID: 12
+            PortID: Output
+          Variable: 0.0
+        haloPower:
+          Connection0:
+            NodeLevelID: 13
+            PortID: Output
+          Variable: 0.0
+        fadeCenter:
+          Connection0:
+            NodeLevelID: 15
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0]
+        fadeNear:
+          Connection0:
+            NodeLevelID: 16
+            PortID: Output
+          Variable: 0.0
+        fadeFar:
+          Connection0:
+            NodeLevelID: 17
+            PortID: Output
+          Variable: 0.0
+        clipPlane:
+          Connection0:
+            NodeLevelID: 18
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        result:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -60
+      PositionY: 200
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Halo Glow
+    Node11:
+      CommentSizeX: 0
+      CommentSizeY: 0
+      DependencyIndex: 11
+      LevelID: 200
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        FinalColor:
+          ClassType1: COLOR
+          Connection0:
+            NodeLevelID: 101
+            PortID: result
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        WorldPosition:
+          Connection0:
+            NodeLevelID: 100
+            PortID: inflated
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: 280
+      PositionY: 90
+      TemplateID: nodes_main_graph
+      Title1: Shader
+      Title2: 3D
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  IsSubGraph4: true
+  IsSubGraph5: true
+  IsSubGraph6: true
+  IsSubGraph7: true
+  IsSubGraph8: true
+  IsSubGraph9: true
+  IsSubGraph10: true
+  IsSubGraph11: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+SystemID: dev.snap.shaders

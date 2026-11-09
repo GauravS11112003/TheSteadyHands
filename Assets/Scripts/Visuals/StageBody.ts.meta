@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/f72a88c7-fe0e-4212-a750-d36da08ffe40>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f692b80d-adae-451c-a3df-4a8b4ec9ecc7
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f692b80d-adae-451c-a3df-4a8b4ec9ecc7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 92b61ea7-2ce4-4cf2-99c5-62c37ad1f438
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/92b61ea7-2ce4-4cf2-99c5-62c37ad1f438>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 84e101b1-199e-40b5-930f-1551b831468f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    capMaterial: false
+    chromeMaterial: false
+    deviceMaterial: false
+    sheetMaterial: false
+    skinMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - skinMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      sheetMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      capMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      deviceMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      chromeMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">StageBody – supine patient manikin, sheet, pillow, ECG + IV (stand-in)</span>"}'
+    - '// @input Asset.Material skinMaterial {"hint":"Skin material — the same one SkinWindow uses (UberPBR, Vertex Color = Base Color)"}'
+    - '// @input Asset.Material sheetMaterial {"hint":"Sheet cloth material over the legs (two-sided)"}'
+    - '// @input Asset.Material capMaterial {"hint":"Soft cloth material for the surgical cap and pillow"}'
+    - '// @input Asset.Material deviceMaterial {"hint":"Vertex-coloured plastic material (electrodes, leads, IV tape/bag)"}'
+    - '// @input Asset.Material chromeMaterial {"hint":"Chrome material (electrode snaps, IV pole)"}'

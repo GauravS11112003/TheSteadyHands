@@ -1,0 +1,70 @@
+- !<AssetImportMetadata/85351e05-949d-4f42-addd-38817ddb1be1>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b30289e5-44de-47ea-b4de-f35ce3af4c37
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b30289e5-44de-47ea-b4de-f35ce3af4c37
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 72f98fd5-46bb-47e9-8d34-302e8a44b489
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/72f98fd5-46bb-47e9-8d34-302e8a44b489>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: c645ba26-d6b2-423e-91a7-95b031334af2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    castShadow: false
+    eyeOffsetCm: false
+    followSec: false
+    gloveMaterial: false
+    handModel: false
+    handScale: false
+    hideAfterSec: false
+    pinchEaseSec: false
+    slideSec: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - handModel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      gloveMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      handScale: 0.900000
+      eyeOffsetCm: 0.500000
+      pinchEaseSec: 0.120000
+      followSec: 0.060000
+      hideAfterSec: 1.500000
+      slideSec: 0.250000
+      castShadow: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject handModel {"hint":"Duplicated SIK RightHandModel (Skin + RightHandRig + RightHandMeshFull), child of this object"}'
+    - '// @input Asset.Material gloveMaterial {"hint":"Solid nitrile-glove material (lit PBR, light blue-white)"}'
+    - '// @input float handScale = 0.9 {"hint":"Hand scale (1 = SIK model, ~22 cm wrist to fingertip)"}'
+    - '// @input float eyeOffsetCm = 0.5 {"hint":"Pinch point offset from the hit point toward the eye (cm)"}'
+    - '// @input float pinchEaseSec = 0.12 {"hint":"Seconds to close / open the pinch"}'
+    - '// @input float followSec = 0.06 {"hint":"Follow smoothing time constant (s); lower = tighter"}'
+    - '// @input float hideAfterSec = 1.5 {"hint":"Hide after this many seconds with no hovered / triggered target"}'
+    - '// @input float slideSec = 0.25 {"hint":"Seconds for the hand to slide in / out"}'
+    - '// @input bool castShadow = true {"hint":"Cast a shadow onto the drape / skin"}'

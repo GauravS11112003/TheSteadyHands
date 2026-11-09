@@ -1,0 +1,102 @@
+- !<Material/325a0542-8760-478d-b15f-2eacfea77c5b>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> c6857a50-c636-4334-8e66-6775809864f9
+- !<PassInfo/c6857a50-c636-4334-8e66-6775809864f9>
+  CachedProperties:
+    - Port_Depth_N200:
+        typeIdx: 1
+        value: 1.000000
+    - Port_FinalColor1_N200:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N200:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N200:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N200:
+        typeIdx: 1
+        value: 0.000000
+    - Port_GSplatRotation_N200:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_GSplatScale_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_PrevWorldPosition_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RayDirection_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldNormal_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldPosition_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldTangent_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+  DepthWrite: false
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: PremultipliedAlpha
+  Properties:
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    clipPlane:
+      typeIdx: 5
+      value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    coreColor:
+      typeIdx: 4
+      value: {x: 0.720000, y: 0.950000, z: 1.000000}
+    fadeCenter:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    fadeFar:
+      typeIdx: 1
+      value: 2000.000000
+    fadeNear:
+      typeIdx: 1
+      value: 1000.000000
+    interior:
+      typeIdx: 1
+      value: 0.260000
+    level:
+      typeIdx: 1
+      value: 1.000000
+    opacity:
+      typeIdx: 1
+      value: 0.500000
+    rimColor:
+      typeIdx: 4
+      value: {x: 0.750000, y: 0.750000, z: 0.750000}
+    rimIntensity:
+      typeIdx: 1
+      value: 1.600000
+    rimPower:
+      typeIdx: 1
+      value: 2.200000
+    shimmer:
+      typeIdx: 1
+      value: 0.300000
+    specular:
+      typeIdx: 1
+      value: 1.100000
+  Pass: !<reference> 9844711e-a24f-4c6d-a1dc-7190317d1da3

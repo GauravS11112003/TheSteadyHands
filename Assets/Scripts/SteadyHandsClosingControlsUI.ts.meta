@@ -1,0 +1,72 @@
+- !<AssetImportMetadata/70224534-5bf2-4f53-afea-8d746e4eded6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b68a2b21-a304-4e87-98f8-bf2ee81dbaca
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b68a2b21-a304-4e87-98f8-bf2ee81dbaca
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b54abdce-10a0-48ca-b5fc-d7f6bc55e295
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b54abdce-10a0-48ca-b5fc-d7f6bc55e295>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: c9161eae-6ffa-48ba-95b6-5b8fe13104d6
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    alertColor: false
+    buttonSizeCm: false
+    closeExtraGapCm: false
+    countCaption: false
+    countHeightCm: false
+    readyLabel: false
+    readyOffsetCm: false
+    trayTopField: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - buttonSizeCm: !<float> 3.000000
+      countHeightCm: !<float> 3.000000
+      closeExtraGapCm: !<float> 2.000000
+      readyLabel: Ready to close
+      alertColor: !<Vec4> {x: 1.000000, y: 0.420000, z: 0.420000, w: 1.000000}
+      countCaption: needles out
+      readyOffsetCm: !<Vec3> {x: -1.500000, y: -6.500000, z: 0.000000}
+      trayTopField: !<Vec3> {x: -55.000000, y: 12.300000, z: -5.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">SteadyHandsClosingControlsUI – Ready to close + needle counter</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float buttonSizeCm = 3 {"hint":"Size of the +, − and the height of every button, cm (brief: 3 cm)", "widget":"slider", "min":2, "max":6, "step":0.25}'
+    - '// @input float countHeightCm = 3 {"hint":"Height of the needle count digits, cm (brief: about 3 cm)", "widget":"slider", "min":1.5, "max":5, "step":0.25}'
+    - "// @input float closeExtraGapCm = 2 {\"hint\":\"Extra gap above Close so it isn't hit by accident, cm (brief: about 2 cm)\", \"widget\":\"slider\", \"min\":0, \"max\":5, \"step\":0.25}"
+    - '// @input string readyLabel = "Ready to close" {"hint":"Label on the Rehearse skip button"}'
+    - '// @input vec4 alertColor = "{1,0.42,0.42,1}" {"hint":"Missing-needle alert colour (red)", "widget":"color"}'
+    - '// @input string countCaption = "needles out" {"hint":"Caption under the count"}'
+    - "// @input vec3 readyOffsetCm = \"{2,-8.6,0}\" {\"hint\":\"Offset of the Rehearse 'Ready to close' button inside the controls, cm (keeps it clear of the ghost's hand)\"}"
+    - '// @input vec3 trayTopField = "{-55,12.3,-5}" {"hint":"Top of the Mayo instrument tray in SurgicalField coordinates, cm (the missing-needle hint points there)"}'
+    - '// @ui {"widget":"group_end"}'

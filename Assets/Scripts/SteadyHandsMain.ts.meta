@@ -1,0 +1,91 @@
+- !<AssetImportMetadata/d6f47bc4-c002-489e-98ce-ae53e0d370c0>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2033c1d9-0669-400d-b10e-fb19f45e06a5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2033c1d9-0669-400d-b10e-fb19f45e06a5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8dab6310-9edc-4b89-91de-f9c4ca2bd1e1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8dab6310-9edc-4b89-91de-f9c4ca2bd1e1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e432c095-9bac-4da3-ab17-a8ffb81aea11
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    angleToleranceDeg: false
+    audio: false
+    biteSpacingCm: false
+    controls: false
+    crossSection: false
+    crossSectionLabels: false
+    ghost: false
+    marksFadeSec: false
+    pad: false
+    padLabels: false
+    passHoldSec: false
+    retryDelaySec: false
+    stitchToleranceMm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - pad: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      crossSection: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      crossSectionLabels: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      ghost: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      controls: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      padLabels: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      audio: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      biteSpacingCm: 0.500000
+      stitchToleranceMm: 1.500000
+      angleToleranceDeg: !<float> 15.000000
+      retryDelaySec: !<float> 1.000000
+      passHoldSec: 1.200000
+      marksFadeSec: 0.800000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">SteadyHandsMain – rehearse → mark → close</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 pad {"hint":"Suture pad controller (pinches, bite marks, ghost stitch)"}'
+    - '// @input AssignableType_2 crossSection {"hint":"3x cross-section controller (practice needle)"}'
+    - '// @input AssignableType_3 crossSectionLabels {"hint":"Labels on the 3x cross-section"}'
+    - '// @input AssignableType_4 ghost {"hint":"Ghost attending demo"}'
+    - '// @input AssignableType_5 controls {"hint":"Controls left of the pad (Ready to close, needle counter, Close)"}'
+    - '// @input AssignableType_6 padLabels {"hint":"Prompt, suture count and Closed labels on the pad"}'
+    - '// @input AssignableType_7 audio {"hint":"Sound cues"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float biteSpacingCm = 0.5 {"hint":"Spacing between bites and from each end, cm (brief: 5 mm → 6.0 cm gives 11)", "widget":"slider", "min":0.3, "max":1, "step":0.05}'
+    - '// @input float stitchToleranceMm = 1.5 {"hint":"Practice stitch: max distance from the ideal arc at REAL size, mm (brief: 1.5 mm)", "widget":"slider", "min":0.5, "max":5, "step":0.1}'
+    - '// @input float angleToleranceDeg = 15 {"hint":"Practice stitch: max entry-angle error from 90°, degrees (brief: 15°)", "widget":"slider", "min":5, "max":45, "step":1}'
+    - '// @input float retryDelaySec = 1 {"hint":"Seconds before the needle resets after a red stitch (brief: about 1 s)", "widget":"slider", "min":0.2, "max":3, "step":0.1}'
+    - '// @input float passHoldSec = 1.2 {"hint":"Seconds the green result stays before Rehearse clears", "widget":"slider", "min":0.2, "max":3, "step":0.1}'
+    - '// @input float marksFadeSec = 0.8 {"hint":"Seconds for the bite marks and count to fade after a successful Close", "widget":"slider", "min":0.2, "max":3, "step":0.1}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/3c7b3a12-7f44-42d7-bf01-66d510bb7d94>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b0c195f5-8cdd-4816-99e7-e98ff91eb2a0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b0c195f5-8cdd-4816-99e7-e98ff91eb2a0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9c50c0fa-8bdc-48c5-a241-7243ec46889f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9c50c0fa-8bdc-48c5-a241-7243ec46889f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: db13c08d-4c33-4e3d-8823-314824e5f0dc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    chromeMaterial: false
+    steelMaterial: false
+    towelMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - steelMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      chromeMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      towelMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">StageTray – Mayo stand, tray and towel (stand-in)</span>"}'
+    - '// @input Asset.Material steelMaterial {"hint":"Brushed stainless material (tray)"}'
+    - '// @input Asset.Material chromeMaterial {"hint":"Chrome material (frame, post)"}'
+    - '// @input Asset.Material towelMaterial {"hint":"Towel cloth material"}'

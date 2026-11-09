@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/d358eb1c-28f2-479c-bcc7-a387d1a2fada>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 375aadcb-490e-4a3d-bc85-8aac23186065
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 375aadcb-490e-4a3d-bc85-8aac23186065
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c17c7497-0d6f-4969-944e-1eb76dece063
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c17c7497-0d6f-4969-944e-1eb76dece063>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 8e21f53b-12f8-4b04-937f-ba07ea92d4ab
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    chromeMaterial: false
+    drapeMaterial: false
+    rimMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - drapeMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      rimMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      chromeMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">StageDrape – draped patient, fenestration, ether screen (stand-in)</span>"}'
+    - '// @input Asset.Material drapeMaterial {"hint":"Drape cloth material (UberPBR, two-sided, Vertex Color = Base Color)"}'
+    - '// @input Asset.Material rimMaterial {"hint":"Incise rim material around the fenestration"}'
+    - '// @input Asset.Material chromeMaterial {"hint":"Chrome material for the ether-screen bar"}'

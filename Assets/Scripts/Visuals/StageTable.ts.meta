@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/daeb6ee1-cd62-486b-af26-fda97de8a7a5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2668de32-be5c-4714-8365-c147d206f06a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2668de32-be5c-4714-8365-c147d206f06a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 82bed8c9-065b-4c37-8956-bc7fbc6630c1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/82bed8c9-065b-4c37-8956-bc7fbc6630c1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 01b9ea02-5eaf-469e-a070-9b33033ea4b6
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    chromeMaterial: false
+    floorMaterial: false
+    mattressMaterial: false
+    steelMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - mattressMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      chromeMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      steelMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      floorMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">StageTable – OR table, rails, column, base (stand-in)</span>"}'
+    - '// @input Asset.Material mattressMaterial {"hint":"Mattress vinyl material"}'
+    - '// @input Asset.Material chromeMaterial {"hint":"Chrome material (rails)"}'
+    - '// @input Asset.Material steelMaterial {"hint":"Painted steel material (frame, column, base)"}'
+    - '// @input Asset.Material floorMaterial {"hint":"Floor material (receives the contact shadow); leave empty for no floor"}'

@@ -1,0 +1,79 @@
+- !<AssetImportMetadata/bb8050c9-f664-41af-bc36-47159b015564>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a14f0801-94d1-4ca7-9e36-934d9866a20f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a14f0801-94d1-4ca7-9e36-934d9866a20f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8989be6c-46f0-4955-859f-ad28a9a51897
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8989be6c-46f0-4955-859f-ad28a9a51897>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 8a0e0c1d-251b-425b-b56f-e049fc15c2fc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    closedAnchor: false
+    closedColor: false
+    closedDelaySec: false
+    closedText: false
+    countAnchor: false
+    countColor: false
+    promptAnchor: false
+    promptText: false
+    skinY: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - promptAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      countAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      closedAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      promptText: Pinch both ends of the incision.
+      closedText: Closed
+      countColor: !<Vec4> {x: 0.750000, y: 1.000000, z: 1.000000, w: 1.000000}
+      closedColor: !<Vec4> {x: 0.400000, y: 1.000000, z: 0.500000, w: 1.000000}
+      skinY: !<float> 1.000000
+      closedDelaySec: 0.650000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">SteadyHandsPadLabelsUI – prompt, suture count, Closed</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - "// @input SceneObject promptAnchor {\"hint\":\"Anchor just above the pad's far edge, tilted to face the user\"}"
+    - '// @input SceneObject countAnchor {"hint":"Anchor ~2 cm in front of the cut on the near side, tilted to face the user"}'
+    - '// @input SceneObject closedAnchor {"hint":"Anchor just above the cut, tilted to face the user"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string promptText = "Pinch both ends of the incision." {"hint":"Prompt shown when Rehearse ends"}'
+    - '// @input string closedText = "Closed" {"hint":"Word shown when the wound is closed"}'
+    - '// @input vec4 countColor = "{0.85,0.98,1,1}" {"hint":"Suture-count label colour (light, reads on the additive display)", "widget":"color"}'
+    - "// @input vec4 closedColor = \"{0.36,1,0.54,1}\" {\"hint\":\"'Closed' glow colour (green #5CFF8A)\", \"widget\":\"color\"}"
+    - "// @input float skinY = 1 {\"hint\":\"Height of the skin (incision plane) in this object's local frame, cm\"}"
+    - "// @input float closedDelaySec = 0.65 {\"hint\":\"Seconds the 'Closed' glow-in waits so the bite marks can turn green first\", \"widget\":\"slider\", \"min\":0, \"max\":1.2, \"step\":0.05}"
+    - '// @ui {"widget":"group_end"}'

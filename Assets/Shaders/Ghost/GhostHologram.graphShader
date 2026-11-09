@@ -1,0 +1,612 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 10
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 0.0, 0.0, 0.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: level
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Level
+      PositionX: -480
+      PositionY: -360
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Level
+    Node1:
+      DependencyIndex: 1
+      LevelID: 11
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 3
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.5, 0.91, 1.0, 1.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: coreColor
+        SortIndex:
+          Variable: 1
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Core Color
+      PositionX: -480
+      PositionY: -290
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Core Color
+    Node2:
+      DependencyIndex: 2
+      LevelID: 12
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 3
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.75, 0.96, 1.0, 1.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: rimColor
+        SortIndex:
+          Variable: 2
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Rim Color
+      PositionX: -480
+      PositionY: -220
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Rim Color
+    Node3:
+      DependencyIndex: 3
+      LevelID: 13
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.2, 0.0, 0.0, 0.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: interior
+        SortIndex:
+          Variable: 3
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Interior
+      PositionX: -480
+      PositionY: -150
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Interior
+    Node4:
+      DependencyIndex: 4
+      LevelID: 14
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [2.0, 0.0, 0.0, 0.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: rimPower
+        SortIndex:
+          Variable: 4
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Rim Power
+      PositionX: -480
+      PositionY: -80
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Rim Power
+    Node5:
+      DependencyIndex: 5
+      LevelID: 15
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.8, 0.0, 0.0, 0.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: rimIntensity
+        SortIndex:
+          Variable: 5
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Rim Intensity
+      PositionX: -480
+      PositionY: -10
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Rim Intensity
+    Node6:
+      DependencyIndex: 6
+      LevelID: 16
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.6, 0.0, 0.0, 0.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: edgeGlow
+        SortIndex:
+          Variable: 6
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Edge Glow
+      PositionX: -480
+      PositionY: 60
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Edge Glow
+    Node7:
+      DependencyIndex: 7
+      LevelID: 17
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.35, 0.0, 0.0, 0.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: specular
+        SortIndex:
+          Variable: 7
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Specular
+      PositionX: -480
+      PositionY: 130
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Specular
+    Node8:
+      DependencyIndex: 8
+      LevelID: 18
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.5, 0.0, 0.0, 0.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: shimmer
+        SortIndex:
+          Variable: 8
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Shimmer
+      PositionX: -480
+      PositionY: 200
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Shimmer
+    Node9:
+      DependencyIndex: 9
+      LevelID: 19
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.42, 0.0, 0.0, 0.0]
+        Group:
+          String: Hologram
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: opacity
+        SortIndex:
+          Variable: 9
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Opacity
+      PositionX: -480
+      PositionY: 270
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Opacity
+    Node10:
+      DependencyIndex: 10
+      LevelID: 20
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, -69.0, -45.0, 0.0]
+        Group:
+          String: Fade
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeCenter
+        SortIndex:
+          Variable: 10
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Fade Center (world)
+      PositionX: -480
+      PositionY: 340
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Fade Center (world)
+    Node11:
+      DependencyIndex: 11
+      LevelID: 21
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1000.0, 0.0, 0.0, 0.0]
+        Group:
+          String: Fade
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeNear
+        SortIndex:
+          Variable: 11
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Fade Near (cm)
+      PositionX: -480
+      PositionY: 410
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Fade Near (cm)
+    Node12:
+      DependencyIndex: 12
+      LevelID: 22
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [2000.0, 0.0, 0.0, 0.0]
+        Group:
+          String: Fade
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeFar
+        SortIndex:
+          Variable: 12
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Fade Far (cm)
+      PositionX: -480
+      PositionY: 480
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Fade Far (cm)
+    Node13:
+      DependencyIndex: 13
+      LevelID: 23
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Group:
+          String: Fade
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: clipPlane
+        SortIndex:
+          Variable: 13
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Clip Plane (n.xyz, d)
+      PositionX: -480
+      PositionY: 550
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Clip Plane (n.xyz, d)
+    Node14:
+      DependencyIndex: 14
+      LevelID: 100
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_float level;
+            input_vec3 coreColor;
+            input_vec3 rimColor;
+            input_float interior;
+            input_float rimPower;
+            input_float rimIntensity;
+            input_float edgeGlow;
+            input_float specular;
+            input_float shimmer;
+            input_float opacity;
+            input_vec3 fadeCenter;
+            input_float fadeNear;
+            input_float fadeFar;
+            input_vec4 clipPlane;
+            output_vec4 result;
+            
+            void main()
+            {
+            	vec3 P = system.getSurfacePositionWorldSpace();
+            	vec3 N = normalize(system.getSurfaceNormalWorldSpace());
+            	vec3 V = normalize(system.getCameraPosition() - P);
+            	float facing = clamp(abs(dot(N, V)), 0.0, 1.0);
+            	float edge = 1.0 - facing;
+            	float fres = pow(edge, rimPower);
+            	float soft = edge * edge;
+            	float hot = pow(edge, 6.0);
+            	float t = system.getTimeElapsed();
+            	float lines = 0.5 + 0.5 * sin(P.y * 18.0 - t * 7.0);
+            	lines = lines * lines * lines * lines;
+            	float bandPos = fract(P.y * 0.06 - t * 0.45);
+            	float band = 1.0 - abs(bandPos - 0.5) * 2.0;
+            	band = band * band * band * band * band * band * band * band;
+            	float grain = system.getRandomFloat(floor(P * 3.0) + vec3(floor(t * 14.0)));
+            	float shim = 1.0 + shimmer * (0.45 * lines + 1.1 * band + 0.3 * (grain - 0.5));
+            	vec3 L = normalize(vec3(0.25, 1.0, 0.55));
+            	vec3 H = normalize(L + V);
+            	float spec = pow(max(dot(N, H), 0.0), 40.0) * specular;
+            	float spec2 = pow(max(dot(N, normalize(vec3(-0.6, 0.4, 0.7) + V)), 0.0), 24.0) * specular * 0.5;
+            	float lambert = 0.45 + 0.55 * max(dot(N, L), 0.0);
+            	vec3 col = coreColor * interior * lambert;
+            	col += rimColor * (fres * rimIntensity + soft * edgeGlow);
+            	col += vec3(1.0) * hot * edgeGlow * 0.8;
+            	col += rimColor * (spec + spec2);
+            	col *= shim;
+            	float a = clamp(opacity * (interior * 2.0 + fres * 0.9 + soft * edgeGlow * 0.4), 0.0, 1.0);
+            	float fade = 1.0 - smoothstep(fadeNear, fadeFar, distance(P, fadeCenter));
+            	float keep = step(0.0, dot(clipPlane.xyz, P) + clipPlane.w);
+            	float k = clamp(level, 0.0, 1.0) * fade * keep;
+            	result = vec4(col * k, a * k);
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        ID:
+          Variable: 0
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Ghost Hologram
+        UseExternalFile:
+          Variable: false
+        level:
+          Connection0:
+            NodeLevelID: 10
+            PortID: Output
+          Variable: 0.0
+        coreColor:
+          Connection0:
+            NodeLevelID: 11
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0]
+        rimColor:
+          Connection0:
+            NodeLevelID: 12
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0]
+        interior:
+          Connection0:
+            NodeLevelID: 13
+            PortID: Output
+          Variable: 0.0
+        rimPower:
+          Connection0:
+            NodeLevelID: 14
+            PortID: Output
+          Variable: 0.0
+        rimIntensity:
+          Connection0:
+            NodeLevelID: 15
+            PortID: Output
+          Variable: 0.0
+        edgeGlow:
+          Connection0:
+            NodeLevelID: 16
+            PortID: Output
+          Variable: 0.0
+        specular:
+          Connection0:
+            NodeLevelID: 17
+            PortID: Output
+          Variable: 0.0
+        shimmer:
+          Connection0:
+            NodeLevelID: 18
+            PortID: Output
+          Variable: 0.0
+        opacity:
+          Connection0:
+            NodeLevelID: 19
+            PortID: Output
+          Variable: 0.0
+        fadeCenter:
+          Connection0:
+            NodeLevelID: 20
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0]
+        fadeNear:
+          Connection0:
+            NodeLevelID: 21
+            PortID: Output
+          Variable: 0.0
+        fadeFar:
+          Connection0:
+            NodeLevelID: 22
+            PortID: Output
+          Variable: 0.0
+        clipPlane:
+          Connection0:
+            NodeLevelID: 23
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        result:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -60
+      PositionY: 90
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Ghost Hologram
+    Node15:
+      CommentSizeX: 0
+      CommentSizeY: 0
+      DependencyIndex: 15
+      LevelID: 200
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        FinalColor:
+          ClassType1: COLOR
+          Connection0:
+            NodeLevelID: 100
+            PortID: result
+          Variable: [1.0, 1.0, 1.0, 1.0]
+      PositionX: 280
+      PositionY: 90
+      TemplateID: nodes_main_graph
+      Title1: Shader
+      Title2: 3D
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  IsSubGraph4: true
+  IsSubGraph5: true
+  IsSubGraph6: true
+  IsSubGraph7: true
+  IsSubGraph8: true
+  IsSubGraph9: true
+  IsSubGraph10: true
+  IsSubGraph11: true
+  IsSubGraph12: true
+  IsSubGraph13: true
+  IsSubGraph14: true
+  IsSubGraph15: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+SystemID: dev.snap.shaders

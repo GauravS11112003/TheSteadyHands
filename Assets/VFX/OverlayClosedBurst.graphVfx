@@ -1,0 +1,555 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 11
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ParticleCount:
+          Variable: 140
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+      PositionX: -150
+      PositionY: -340
+      TemplateID: nodes_particle_emit_begin
+      Title1: Emit Particle
+      Title2: "Count: 90"
+    Node1:
+      DependencyIndex: 1
+      LevelID: 13
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Frequency:
+          ItemIndex: 0
+          ItemList: "Per Second : Per Frame"
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 11
+            PortID: ParticleOut
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+        SpawnRate:
+          Variable: 1000.0
+      PositionX: -140
+      PositionY: -285
+      TemplateID: node_main_particle_spawn_continuous
+      Title1: Spawn Continuous
+    Node10:
+      DependencyIndex: 10
+      LevelID: 0
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Advanced:
+          Variable: false
+        CustomForward:
+          Variable: [0.0, 0.0, 1.0]
+        CustomUpAxis:
+          Variable: [0.0, 0.0, 0.0]
+        DynamicEnable:
+          Variable: false
+        EnableRotation:
+          Variable: false
+        Enabled:
+          Variable: 1.0
+        ForwardAxis:
+          ItemIndex: 0
+          ItemList: "Camera Plane : Camera Position : Custom"
+        FreezeAxis:
+          ItemIndex: 0
+          ItemList: "None : X : Y : Z"
+        LookAtPosition:
+          Variable: [0.0, 0.0, 0.0]
+        MeshOrientation:
+          ItemIndex: 1
+          ItemList: "X : Y : Z : -X : -Y : -Z"
+        OrientInfo:
+          String: Camera Plane / Camera Up
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 39
+            PortID: ParticleOut
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+        Presets:
+          ItemIndex: 0
+          ItemList: "Billboard ( Camera Up ) : Billboard ( World Up ) : Look at ( Position Forward ) : Velocity"
+        QuadOrientation:
+          ItemIndex: 1
+          ItemList: "X : Y : -X : -Y"
+        RotationAngle:
+          Variable: 0.0
+        RotationAngleMesh:
+          Variable: [0.0, 0.0, 0.0]
+        UpAxis:
+          ItemIndex: 0
+          ItemList: "Camera Up : World Up : Particle Up : Custom"
+      PositionX: -140
+      PositionY: 1415
+      TemplateID: node_main_particle_orient
+      Title1: Particle Orient ( Quad )
+      Title2: Billboard ( Camera Up )
+    Node10CheckEnabled: true
+    Node10CheckExists: true
+    Node12:
+      DependencyIndex: 12
+      LevelID: 102
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |
+            void main()
+            {
+            	vec2 uv = system.getSurfaceUVCoord0() * 2.0 - 1.0;
+            	float r = length(uv);
+            	float m = exp(-r * r * 5.0) * (1.0 - smoothstep(0.75, 1.0, r));
+            	float core = 1.0 - smoothstep(0.0, 0.35, r);
+            	vec4 pc = system.getParticleColor();
+            	vec3 col = mix(pc.rgb, vec3(1.0), core * 0.6);
+            	float a = pc.a * m;
+            	system.setPixelColor0(vec4(col * a, a * 0.45));
+            }
+
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : System Built-In Values/Functions"
+        ID:
+          Variable: 102
+        Locked:
+          Variable: false
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 0
+            PortID: ParticleOut
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Burst Color
+        UseExternalFile:
+          Variable: false
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+      PositionX: -140
+      PositionY: 1468
+      TemplateID: node_util_custom_container_output_pixel
+      TemplateVersionMinor: 1
+      Title1: Burst Color
+    Node12CheckEnabled: true
+    Node12CheckExists: true
+    Node13:
+      DependencyIndex: 13
+      LevelID: 40
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Particle:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 102
+            PortID: ParticleOut
+      PositionX: -147
+      PositionY: 1496
+      TemplateID: nodes_particle_output_end
+      Title1: Particle ( Output End )
+    Node13CheckValue: false
+    Node1CheckEnabled: true
+    Node1CheckExists: true
+    Node2:
+      DependencyIndex: 2
+      LevelID: 12
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 13
+            PortID: ParticleOut
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+      PositionX: -140
+      PositionY: -226
+      TemplateID: nodes_particle_emit_end
+      Title1: Particle ( Emit End )
+    Node3:
+      DependencyIndex: 3
+      LevelID: 61
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Burst:
+          Variable: 1.0
+        Custom Value:
+          Variable: 0.03333330154418945
+        Delay:
+          Variable: 0.0
+        Fixed Delta Time:
+          ItemIndex: 1
+          ItemList: "1/15 : 1/30 : 1/60 : 1/120 : Custom"
+        LifeSpan:
+          ItemIndex: 1
+          ItemList: "Live Forever : Max Life"
+        MaxLife:
+          Variable: 2.0
+        Maxparticles:
+          Variable: 140
+        Particle:
+          ClassType2: PARTICLE
+          IOType: 1
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 12
+            PortID: ParticleOut
+        PauseWhenNotVisible:
+          Variable: false
+        Play Rate:
+          Variable: 1.0
+        PositionMax:
+          Variable: [1000.0, 1000.0, 1000.0]
+        PositionMaxScalar:
+          Variable: 1000.0
+        PositionMin:
+          Variable: [-1000.0, -1000.0, -1000.0]
+        PositionMinScalar:
+          Variable: -1000.0
+        PositionPerAxis:
+          Variable: false
+        SizeInheritsParentScale:
+          Variable: true
+        Space:
+          ItemIndex: 1
+          ItemList: "World : Local"
+        SpawnAmount:
+          Variable: 140
+        SpawnMode:
+          ItemIndex: 0
+          ItemList: "Continuous : Burst : Once"
+        SpawnRate:
+          Variable: 400.0
+        Use Fixed Delta Time:
+          Variable: false
+        Warmup:
+          Variable: false
+        WarmupDt:
+          String: "0.0333333"
+        WarmupFPS:
+          Variable: 30.0
+        WarmupSteps:
+          Variable: 30
+        WarmupTime:
+          Variable: 1.0
+        _ScaleInit:
+          Variable: true
+      PositionX: -150
+      PositionY: 0
+      TemplateID: nodes_particle_spawn_begin
+      TemplateVersionMinor: 1
+      Title1: Initialize Particle
+    Node4:
+      DependencyIndex: 4
+      LevelID: 100
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |
+            void main()
+            {
+            	vec4 r = system.getParticleRandomVec4(true, true, false, 1.0);
+            	vec4 q = system.getParticleRandomVec4(true, true, false, 7.0);
+            	float x = mix(-3.2, 3.2, r.x);
+            	float side = q.w < 0.5 ? -1.0 : 1.0;
+            	system.setParticlePosition(vec3(x, 0.08, side * mix(0.05, 0.7, r.y)));
+            	system.setParticleVelocity(vec3((q.x - 0.5) * 4.0, mix(5.0, 14.0, r.z), side * mix(0.5, 4.0, q.y)));
+            	system.setParticleSize(mix(0.14, 0.34, q.z));
+            	system.setParticleMass(1.0);
+            	vec4 green = vec4(0.36, 1.0, 0.54, 1.0);
+            	vec4 white = vec4(0.85, 1.0, 0.92, 1.0);
+            	system.setParticleColor(mix(green, white, r.w * r.w));
+            	system.setParticleLife(mix(0.8, 1.6, r.w));
+            }
+
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : System Built-In Values/Functions"
+        ID:
+          Variable: 100
+        Locked:
+          Variable: false
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 61
+            PortID: Particle
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Burst Spawn
+        UseExternalFile:
+          Variable: false
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+      PositionX: -140
+      PositionY: 55
+      TemplateID: node_util_custom_container_spawn
+      TemplateVersionMinor: 1
+      Title1: Burst Spawn
+    Node4CheckEnabled: true
+    Node4CheckExists: true
+    Node5:
+      DependencyIndex: 5
+      LevelID: 25
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 100
+            PortID: ParticleOut
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+      PositionX: -140
+      PositionY: 312
+      TemplateID: nodes_particle_spawn_end
+      Title1: Particle ( Spawn End )
+    Node5CheckValue: false
+    Node6:
+      DependencyIndex: 6
+      LevelID: 85
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 25
+            PortID: ParticleOut
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+        Simulate:
+          Variable: true
+        Space:
+          ItemIndex: 0
+          ItemList: "World : Local"
+      PositionX: -150
+      PositionY: 780
+      TemplateID: nodes_particle_update_begin
+      Title1: Update Particle
+      Title2: World Space
+    Node7:
+      DependencyIndex: 7
+      LevelID: 101
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |
+            void main()
+            {
+            	float age = system.getParticleAgeRatio();
+            	vec4 c = system.getParticleColor();
+            	c.a = clamp(age / 0.06, 0.0, 1.0) * (1.0 - age) * (1.0 - age);
+            	system.setParticleColor(c);
+            	vec3 vel = system.getParticleVelocity();
+            	system.setParticleForce(system.getParticleForce() - vel * 2.4 + vec3(0.0, -2.0, 0.0));
+            }
+
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : System Built-In Values/Functions"
+        ID:
+          Variable: 101
+        Locked:
+          Variable: false
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 85
+            PortID: ParticleOut
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Burst Update
+        UseExternalFile:
+          Variable: false
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+      PositionX: -140
+      PositionY: 835
+      TemplateID: node_util_custom_container_update
+      Title1: Burst Update
+    Node7CheckEnabled: true
+    Node7CheckExists: true
+    Node8:
+      DependencyIndex: 8
+      LevelID: 15
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ParticleIn:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 101
+            PortID: ParticleOut
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+      PositionX: -140
+      PositionY: 966
+      TemplateID: nodes_particle_update_end
+      Title1: Particle Update ( End )
+    Node8CheckValue: false
+    Node9:
+      DependencyIndex: 9
+      LevelID: 39
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        AlphaTestThreshold:
+          Variable: 0.0
+        AttributeUsageInfo:
+          String: "Position, Age, Life, Velocity, Size, Color"
+        BlendMode:
+          ItemIndex: 4
+          ItemList: "Disabled : Normal : Multiply : Add : Premultiplied Alpha : Glass : Colored Glass : Alpha Test : Alpha To Coverage : Screen : Min : Max : Custom"
+        ColorMaskA:
+          Variable: true
+        ColorMaskB:
+          Variable: true
+        ColorMaskG:
+          Variable: true
+        ColorMaskR:
+          Variable: true
+        CullMode:
+          ItemIndex: 1
+          ItemList: "Front : Back"
+        CustomMaterial:
+          Variable: true
+        DebugMode:
+          ItemIndex: 0
+          ItemList: "Disabled : RT 0 : RT 1 : RT 2 : RT 3 : RT All : Position : Velocity : Color ( no alpha ) : Color ( alpha ) : Life : Age : Size : Matrix ( Right ) : Matrix ( Up ) : Matrix ( Forward )"
+        DebugMultiplier:
+          Variable: 1.0
+        DepthFunction:
+          ItemIndex: 3
+          ItemList: "Never : Less : Equal : LessEqual : Greater : NotEqual : GreaterEqual : Always"
+        DepthTest:
+          Variable: true
+        DepthWrite:
+          Variable: false
+        FlipBackfaceNormal:
+          Variable: false
+        GeometryType:
+          ItemIndex: 0
+          ItemList: "Quad : Mesh"
+        ID:
+          String: Output_39
+        Mesh:
+          ClassType1: REFUID
+          String: ""
+        MeshMaterial:
+          ClassType1: REFUID
+          String: ""
+        Name:
+          String: Effect_A
+        OutputName:
+          String: Output
+        Particle:
+          ClassType2: PARTICLE
+          Connection0:
+            NodeLevelID: 15
+            PortID: ParticleOut
+        ParticleOut:
+          ClassType2: PARTICLE
+          IOType: 1
+        PolygonOffsetFactor:
+          Variable: 0.0
+        PolygonOffsetUnits:
+          Variable: 0.0
+        RTUsageInfo:
+          String: "RT 0, RT 1, RT 2"
+        RenderOrderOffset:
+          Variable: 0
+        ShadowColor:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        ShadowDensity:
+          Variable: 1.0
+        ShadowMode:
+          ItemIndex: 0
+          ItemList: "None : Caster"
+        SortByDepth:
+          Variable: false
+        TwoSided:
+          Variable: true
+      PositionX: -150
+      PositionY: 1360
+      TemplateID: nodes_particle_output_begin
+      Title1: Output Quad ( World Space )
+    Node9CheckEnabled: true
+    Node9CheckExists: true
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+SystemID: dev.snap.particles

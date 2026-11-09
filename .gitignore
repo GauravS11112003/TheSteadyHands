@@ -1,0 +1,26 @@
+# BEGIN Lens Studio managed Agents-Docs block
+.mcp.json
+.cursor/mcp.json
+.vscode/mcp.json
+.codex/config.toml
+.claude/settings.local.json
+# END Lens Studio managed Agents-Docs block
+
+# Added by Lens Studio (LEAF plugin)
+leaf_plugin_settings.json
+
+# Local / generated (not needed to open the project)
+Cache/
+Workspaces/
+Support/
+PluginsUserPreferences/
+*.esproj.*.lock
+.virtual-scene.json
+.DS_Store
+
+# Secrets
+spk_debug_key.pem
+*.pem
+
+# Raw preview recordings (~100 MB each); the edited videos are kept
+devpost/Recording*.mp4

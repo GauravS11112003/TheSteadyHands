@@ -1,0 +1,76 @@
+- !<AssetImportMetadata/0d2756fc-a577-44f3-b728-f9c04594d4eb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> ac9d98f2-a180-4b56-b7ba-bea6b6a2b769
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> ac9d98f2-a180-4b56-b7ba-bea6b6a2b769
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 94d6f4e7-6511-4746-9df1-ee33c4af2fca
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/94d6f4e7-6511-4746-9df1-ee33c4af2fca>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 2ccc14f0-0967-43a8-b5a8-7fc51aab1fb3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    clickTrack: false
+    closedTrack: false
+    masterVolume: false
+    mismatchTrack: false
+    mismatchVolume: false
+    pinchTrack: false
+    stitchGoodTrack: false
+    stitchMissTrack: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - clickTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      pinchTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      stitchGoodTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      stitchMissTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      mismatchTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      closedTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      masterVolume: 0.800000
+      mismatchVolume: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">SteadyHandsAudioController – sound cues</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input Asset.AudioTrackAsset clickTrack {"hint":"Soft click for + / − / Ready to close / Close"}'
+    - '// @input Asset.AudioTrackAsset pinchTrack {"hint":"Tick when a pinch lands on the pad"}'
+    - '// @input Asset.AudioTrackAsset stitchGoodTrack {"hint":"Practice stitch turned green"}'
+    - '// @input Asset.AudioTrackAsset stitchMissTrack {"hint":"Practice stitch turned red"}'
+    - '// @input Asset.AudioTrackAsset mismatchTrack {"hint":"LOW chime for a needle-count mismatch on Close"}'
+    - '// @input Asset.AudioTrackAsset closedTrack {"hint":"Calm confirmation when the wound is closed"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float masterVolume = 0.8 {"hint":"Master volume for all cues (0–1)", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float mismatchVolume = 1 {"hint":"Extra gain on the mismatch chime so it reads clearly (0–1)", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

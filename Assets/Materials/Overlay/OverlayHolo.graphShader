@@ -1,0 +1,391 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 1
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: baseColor
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Base Color
+        Tooltip:
+          String: ""
+      PositionX: -420
+      PositionY: -40
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Base Color
+    Node1:
+      DependencyIndex: 1
+      LevelID: 2
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [2.0, 0.5, 0.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: shapeParams
+        SortIndex:
+          Variable: 1
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Shape Params
+        Tooltip:
+          String: ""
+      PositionX: -420
+      PositionY: 80
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Shape Params
+    Node2:
+      DependencyIndex: 2
+      LevelID: 3
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 0.3, 0.05]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: panelParams
+        SortIndex:
+          Variable: 2
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Panel Params
+        Tooltip:
+          String: ""
+      PositionX: -420
+      PositionY: 200
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Panel Params
+    Node3:
+      DependencyIndex: 3
+      LevelID: 5
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: holoMode
+        SortIndex:
+          Variable: 3
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Holo Mode
+        Tooltip:
+          String: ""
+      PositionX: -420
+      PositionY: 320
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Holo Mode
+    Node4:
+      DependencyIndex: 4
+      LevelID: 0
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4 colorIn;
+            input_vec4 shapeIn;
+            input_vec4 panelIn;
+            input_float modeIn;
+            output_vec4 result;
+
+            float sdRoundBox(vec2 p, vec2 b, float r)
+            {
+            	vec2 q = abs(p) - b + vec2(r);
+            	return length(max(q, vec2(0.0))) + min(max(q.x, q.y), 0.0) - r;
+            }
+
+            void main()
+            {
+            	vec2 uv = system.getSurfaceUVCoord0();
+            	float mode = floor(modeIn + 0.5);
+            	vec3 col = colorIn.rgb;
+            	float cov = colorIn.a;
+            	float mRgb = 1.0;
+            	float mA = 1.0;
+            	float white = 0.0;
+            	if (mode < 0.5) {
+            		// 0 bead: white-hot core facing the eye, coloured fresnel rim
+            		vec3 N = normalize(system.getSurfaceNormalWorldSpace());
+            		vec3 V = normalize(system.getCameraPosition() - system.getSurfacePositionWorldSpace());
+            		float ndv = clamp(abs(dot(N, V)), 0.0, 1.0);
+            		float fres = pow(1.0 - ndv, max(0.5, shapeIn.x));
+            		white = shapeIn.y * ndv * ndv;
+            		mRgb = 1.0 + shapeIn.z * fres;
+            		mA = mix(1.0, shapeIn.w, fres);
+            	} else if (mode < 1.5) {
+            		// 1 glow sprite, uv in [-1,1]: x falloff, y core whiteness, z core radius, w alpha share
+            		float r = length(uv);
+            		float g = exp(-r * r * shapeIn.x);
+            		float core = 1.0 - smoothstep(shapeIn.z * 0.5, max(shapeIn.z, 0.001), r);
+            		float edge = 1.0 - smoothstep(0.75, 1.0, r);
+            		mRgb = max(g, core) * edge;
+            		mA = mRgb * shapeIn.w;
+            		white = shapeIn.y * core;
+            	} else if (mode < 2.5) {
+            		// 2 ring, uv in [-1,1]: x radius, y line half width, z glow width, w whiteness
+            		float r = length(uv);
+            		float d = abs(r - shapeIn.x);
+            		float line = 1.0 - smoothstep(shapeIn.y * 0.35, max(shapeIn.y, 0.001), d);
+            		float glow = exp(-(d * d) / max(0.0001, shapeIn.z * shapeIn.z)) * 0.5;
+            		float edge = 1.0 - smoothstep(0.85, 1.0, r);
+            		mRgb = max(line, glow) * edge;
+            		mA = line * edge;
+            		white = shapeIn.w * line;
+            	} else if (mode < 3.5) {
+            		// 3 ribbon, u along [0,1], v across [-1,1]: x reveal, y across sharpness, z end taper, w head glow
+            		float across = clamp(1.0 - abs(uv.y), 0.0, 1.0);
+            		float prof = pow(across, max(0.1, shapeIn.y));
+            		float tz = max(0.001, shapeIn.z);
+            		float taper = smoothstep(0.0, tz, uv.x) * smoothstep(0.0, tz, 1.0 - uv.x);
+            		float reveal = 1.0 - smoothstep(shapeIn.x - 0.015, shapeIn.x + 0.001, uv.x);
+            		float hx = (uv.x - shapeIn.x) / 0.04;
+            		float head = exp(-hx * hx) * shapeIn.w * step(shapeIn.x, 0.999);
+            		mRgb = prof * taper * reveal + head * prof;
+            		mA = prof * taper * reveal;
+            		white = clamp(across * across * across * 0.5 + head, 0.0, 1.0);
+            	} else if (mode < 4.5) {
+            		// 4 rounded panel, uv = cm from centre. panelIn: xy half size, z corner radius, w border width
+            		// shapeIn: x fill brightness, y outer glow width (cm), z fill coverage, w top sheen
+            		float d = sdRoundBox(uv, panelIn.xy, panelIn.z);
+            		float aa = max(fwidth(d) * 0.75, 0.004);
+            		float inside = 1.0 - smoothstep(-aa, aa, d);
+            		float bw = max(panelIn.w, 0.005);
+            		float band = smoothstep(-bw - aa, -bw + aa, d) * inside;
+            		float outer = (1.0 - inside) * exp(-max(d, 0.0) / max(0.01, shapeIn.y));
+            		float t = clamp(uv.y / max(0.01, panelIn.y) * 0.5 + 0.5, 0.0, 1.0);
+            		float sheen = 1.0 + shapeIn.w * t * t;
+            		mRgb = inside * shapeIn.x * sheen + band + outer * 0.45;
+            		mA = inside * shapeIn.z + band * 0.6;
+            		white = band * 0.35;
+            	} else {
+            		// 5 glossy lit body (thread): xyz direction toward the key light, w shininess
+            		vec3 N = normalize(system.getSurfaceNormalWorldSpace());
+            		vec3 V = normalize(system.getCameraPosition() - system.getSurfacePositionWorldSpace());
+            		vec3 L = normalize(shapeIn.xyz);
+            		float diff = clamp(dot(N, L), 0.0, 1.0) * 0.7 + 0.3;
+            		vec3 H = normalize(L + V);
+            		float spec = pow(clamp(dot(N, H), 0.0, 1.0), max(2.0, shapeIn.w));
+            		float fres = pow(1.0 - clamp(abs(dot(N, V)), 0.0, 1.0), 3.0);
+            		col = col * diff + vec3(spec * 0.9 * cov) + col * fres * 0.5;
+            	}
+            	float lum = max(max(col.r, col.g), col.b);
+            	vec3 c = mix(col, vec3(lum), clamp(white, 0.0, 1.0));
+            	result = vec4(c * mRgb, clamp(cov * mA, 0.0, 1.0));
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        ID:
+          Variable: 0
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Overlay Holo
+        UseExternalFile:
+          Variable: false
+        colorIn:
+          Connection0:
+            NodeLevelID: 1
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        shapeIn:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        panelIn:
+          Connection0:
+            NodeLevelID: 3
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        modeIn:
+          Connection0:
+            NodeLevelID: 5
+            PortID: Output
+          Variable: 0.0
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        result:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -59
+      PositionY: 91
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Overlay Holo
+    Node5:
+      CommentSizeX: 0
+      CommentSizeY: 0
+      DependencyIndex: 5
+      LevelID: 4
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Depth:
+          Variable: 1.0
+        DepthMode:
+          ItemIndex: 0
+          ItemList: "Non-Linear - Normalized [0 to 1] : Linear - Normalized [-1 to 1] : View Space - Non-Normalized [-near to -far]"
+        DontFreezeSpec:
+          Variable: false
+        FinalColor:
+          ClassType1: COLOR
+          Connection0:
+            NodeLevelID: 0
+            PortID: result
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor1:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor2:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor3:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        GSplatPointSize:
+          Variable: 0.0
+        GSplatRotation:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        GSplatScale:
+          Variable: [0.0, 0.0, 0.0]
+        Motion Vector Pass:
+          ItemIndex: 0
+          ItemList: "Write Velocity and Depth : Discard Velocity but Write Depth : Discard Velocity and Depth"
+        Negative:
+          Variable: false
+        PrevWorldPosition:
+          Variable: [0.0, 0.0, 0.0]
+        RayDirection:
+          Variable: [0.0, 1.0, 0.0]
+        RayOrigin:
+          Variable: [0.0, 0.0, 0.0]
+        ShowPrevPos:
+          Variable: false
+        Targets:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : 4"
+        Type:
+          ItemIndex: 0
+          ItemList: "3D : Post Effect : Hair : Gaussian Splatting"
+        WorldNormal:
+          Variable: [0.0, 1.0, 0.0]
+        WorldPosition:
+          Variable: [0.0, 0.0, 0.0]
+        WorldTangent:
+          Variable: [0.0, 0.0, 1.0]
+        WriteDepth:
+          Variable: false
+      PositionX: 260
+      PositionY: 90
+      TemplateID: nodes_main_graph
+      Title1: Shader
+      Title2: 3D
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  IsSubGraph4: true
+  IsSubGraph5: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+SystemID: dev.snap.shaders

@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/8c3d459c-4adc-4243-a24d-0592926a6555>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c1739319-6e55-45a3-847e-0c255ac6b0d5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c1739319-6e55-45a3-847e-0c255ac6b0d5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 51f4b0c3-25d4-4f6a-a555-1c94acb69cc8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/51f4b0c3-25d4-4f6a-a555-1c94acb69cc8>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 1f631099-5046-43c9-b8b2-ef7f6e9169c5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    buildAnesthesia: false
+    chromeMaterial: false
+    floorMaterial: false
+    glowMaterial: false
+    screenMaterial: false
+    wallMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - floorMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      wallMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      glowMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      screenMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      chromeMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      buildAnesthesia: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">StageRoom – operating-room set (preview stand-in)</span>"}'
+    - '// @input Asset.Material floorMaterial {"hint":"Floor material (UberPBR, Vertex Color = Base Color, light grey, low roughness)"}'
+    - '// @input Asset.Material wallMaterial {"hint":"Wall/ceiling/fixture material (UberPBR, Vertex Color = Base Color, white base)"}'
+    - '// @input Asset.Material glowMaterial {"hint":"Unlit warm-white material for light panels and lamp faces"}'
+    - '// @input Asset.Material screenMaterial {"hint":"Unlit textured material showing the vitals (ECG) screen"}'
+    - '// @input Asset.Material chromeMaterial {"hint":"Chrome material (lamp arms, poles)"}'
+    - '// @input bool buildAnesthesia = true {"hint":"Build the procedural anaesthesia machine (off if a generated GLB is placed instead)"}'

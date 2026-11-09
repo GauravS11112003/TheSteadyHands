@@ -1,0 +1,87 @@
+- !<Material/3344389c-236f-4a1d-a668-3fea00b488e9>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> 9d864501-a022-4407-871f-ee58f987fb05
+- !<PassInfo/9d864501-a022-4407-871f-ee58f987fb05>
+  CachedProperties:
+    - Port_Depth_N200:
+        typeIdx: 1
+        value: 1.000000
+    - Port_FinalColor1_N200:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N200:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N200:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N200:
+        typeIdx: 1
+        value: 0.000000
+    - Port_GSplatRotation_N200:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_GSplatScale_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_PrevWorldPosition_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RayDirection_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldNormal_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldTangent_N200:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+  DepthWrite: false
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: Add
+  Properties:
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    clipPlane:
+      typeIdx: 5
+      value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    fadeCenter:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    fadeFar:
+      typeIdx: 1
+      value: 2000.000000
+    fadeNear:
+      typeIdx: 1
+      value: 1000.000000
+    haloColor:
+      typeIdx: 4
+      value: {x: 0.550000, y: 0.550000, z: 0.550000}
+    haloIntensity:
+      typeIdx: 1
+      value: 0.550000
+    haloPower:
+      typeIdx: 1
+      value: 1.600000
+    haloWidth:
+      typeIdx: 1
+      value: 0.350000
+    level:
+      typeIdx: 1
+      value: 1.000000
+  Pass: !<reference> c969219a-03e8-45b6-bf2f-1ce52b6f6e6e

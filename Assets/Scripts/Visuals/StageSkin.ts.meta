@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/80913c42-325a-4a01-bc19-8d22521fd93a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> fae93c75-cf22-435c-8455-98d30b3817f8
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> fae93c75-cf22-435c-8455-98d30b3817f8
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e53fe7d3-a2f7-494d-9552-9e0ac9347e39
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e53fe7d3-a2f7-494d-9552-9e0ac9347e39>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a78dbb05-06cc-48bc-bc75-11a0237b25c8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    eversionCm: false
+    skinMaterial: false
+    woundMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - skinMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      woundMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      eversionCm: 0.035000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">StageSkin – prepped skin window + 3D incision (stand-in)</span>"}'
+    - '// @input Asset.Material skinMaterial {"hint":"Skin material (UberPBR: skin albedo + normal, Vertex Color = Base Color)"}'
+    - '// @input Asset.Material woundMaterial {"hint":"Wound wall material (UberPBR, Vertex Color = Base Color, low roughness)"}'
+    - '// @input float eversionCm = 0.035 {"hint":"Lip eversion height at the wound centre, cm (keep ≤ 0.05 so bite dots stay visible)"}'

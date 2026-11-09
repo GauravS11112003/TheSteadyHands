@@ -1,0 +1,118 @@
+- !<AssetImportMetadata/a76b230f-d888-4763-bf8f-677b45fad66d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 55e3838a-d7cf-44d0-a582-44fc12b55f68
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 55e3838a-d7cf-44d0-a582-44fc12b55f68
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 20d20917-b1b0-43a1-9d0f-51722bbf4909
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/20d20917-b1b0-43a1-9d0f-51722bbf4909>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: ed9e084a-30cc-4651-b2dc-e6d36c4ca7b8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    angleToleranceDeg: false
+    dermisTexture: false
+    fatTexture: false
+    foldRoot: false
+    foldSec: false
+    grabZoneCm: false
+    guideColor: false
+    labels: false
+    muscleTexture: false
+    needleColor: false
+    practiceNeedle: false
+    scanSec: false
+    skinTexture: false
+    tiltDeg: false
+    tissueMaterial: false
+    toleranceMm: false
+    unlitMaterial: false
+    vertexColorMaterial: false
+    viewScale: false
+    woundAnchor: false
+    woundTopOffset: false
+    yawDeg: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - foldRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      practiceNeedle: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      labels: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      tissueMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      vertexColorMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      unlitMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      skinTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      dermisTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      fatTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      muscleTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      woundAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      viewScale: !<float> 3.000000
+      grabZoneCm: !<float> 2.000000
+      needleColor: !<Vec4> {x: 0.900000, y: 0.980000, z: 1.000000, w: 1.000000}
+      guideColor: !<Vec4> {x: 0.600000, y: 0.800000, z: 1.000000, w: 1.000000}
+      toleranceMm: 1.500000
+      angleToleranceDeg: !<float> 15.000000
+      woundTopOffset: 0.500000
+      tiltDeg: !<float> 18.000000
+      yawDeg: !<float> -14.000000
+      scanSec: 1.500000
+      foldSec: 0.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">SteadyHandsCrossSectionController – 3x skin cross-section + practice needle</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject foldRoot {"hint":"Authored child that holds the diagram; enabled while shown"}'
+    - '// @input SceneObject practiceNeedle {"hint":"Authored practice needle (gets the 2 cm grab-zone collider + Interactable)"}'
+    - '// @input AssignableType_1 labels {"hint":"Labels UI module for this cross-section"}'
+    - '// @input Asset.Material tissueMaterial {"hint":"XS_TissueTex: Uber Unlit, vertex colour = Base Color, base texture on (cloned per layer)"}'
+    - '// @input Asset.Material vertexColorMaterial {"hint":"XS_VertexColor: Uber Unlit, vertex colour = Base Color, no texture (glows, chrome, details)"}'
+    - '// @input Asset.Material unlitMaterial {"hint":"Fallback unlit material (SH_Unlit), used only if the XSection materials are missing"}'
+    - '// @input Asset.Texture skinTexture {"hint":"Skin surface detail texture (epidermis)"}'
+    - '// @input Asset.Texture dermisTexture {"hint":"Dermis collagen detail texture"}'
+    - '// @input Asset.Texture fatTexture {"hint":"Fat lobule detail texture"}'
+    - '// @input Asset.Texture muscleTexture {"hint":"Muscle striation detail texture"}'
+    - '// @input SceneObject woundAnchor {"hint":"The pad (SuturePad): the projection link drops to its top centre"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float viewScale = 3 {"hint":"Drawing scale of the cross-section (brief: 3x real size)", "widget":"slider", "min":1, "max":6, "step":0.5}'
+    - "// @input float grabZoneCm = 2 {\"hint\":\"Diameter of the needle's grab zone, cm (brief: about 2 cm)\", \"widget\":\"slider\", \"min\":1, \"max\":4, \"step\":0.25}"
+    - '// @input vec4 needleColor = "{0.9,0.98,1,1}" {"hint":"Practice needle glow + thread colour before scoring", "widget":"color"}'
+    - "// @input vec4 guideColor = \"{0.6,0.9,1,1}\" {\"hint\":\"Ghost trace colour (the attending's ideal arc)\", \"widget\":\"color\"}"
+    - '// @input float toleranceMm = 1.5 {"hint":"Pass tolerance drawn as the band around the ideal arc, REAL mm (keep = SteadyHandsMain.stitchToleranceMm)"}'
+    - '// @input float angleToleranceDeg = 15 {"hint":"Entry-angle tolerance drawn on the protractor, degrees (keep = SteadyHandsMain.angleToleranceDeg)"}'
+    - "// @input float woundTopOffset = 0.5 {\"hint\":\"Pad top above the anchor's origin, cm (SuturePad: 0.5)\"}"
+    - '// @input float tiltDeg = 18 {"hint":"Presentation tilt of the block toward the eye, degrees (shows the skin surface)", "widget":"slider", "min":0, "max":35, "step":1}'
+    - '// @input float yawDeg = -14 {"hint":"Presentation yaw, degrees (negative shows the right side face)", "widget":"slider", "min":-35, "max":35, "step":1}'
+    - '// @input float scanSec = 1.5 {"hint":"Seconds for the holographic scan-in (unfold)", "widget":"slider", "min":0.4, "max":3, "step":0.05}'
+    - '// @input float foldSec = 0.7 {"hint":"Seconds to fold the cross-section away", "widget":"slider", "min":0.1, "max":2, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

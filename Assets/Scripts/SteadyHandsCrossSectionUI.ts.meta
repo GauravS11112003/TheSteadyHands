@@ -1,0 +1,66 @@
+- !<AssetImportMetadata/4e075e37-8c59-4386-9697-a7c59486d4a0>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7bbbe1a5-7a4d-42bf-a2fd-2f37b264a3d9
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7bbbe1a5-7a4d-42bf-a2fd-2f37b264a3d9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bd67766f-ea9d-4bb9-9713-e5dbd390dec4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bd67766f-ea9d-4bb9-9713-e5dbd390dec4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 4be750e4-859c-43f5-a937-fd8bbc0c433e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accentColor: false
+    failColor: false
+    messageColor: false
+    passColor: false
+    viewingDistanceCm: false
+    watchText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - viewingDistanceCm: !<float> 71.000000
+      watchText: "Watch the attending's stitch"
+      messageColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.900000}
+      passColor: !<Vec4> {x: 0.450000, y: 1.000000, z: 0.550000, w: 1.000000}
+      failColor: !<Vec4> {x: 1.000000, y: 0.420000, z: 0.420000, w: 1.000000}
+      accentColor: !<Vec4> {x: 0.500000, y: 0.910000, z: 1.000000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">SteadyHandsCrossSectionUI – labels on the 3x cross-section</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float viewingDistanceCm = 71 {"hint":"Viewing distance used to size the labels, cm (section is ~71 cm from the eye)", "widget":"slider", "min":40, "max":120, "step":1}'
+    - "// @input string watchText = \"Watch the attending's stitch\" {\"hint\":\"Message shown while the ghost attending demonstrates\"}"
+    - '// @input vec4 messageColor = "{0.92,0.98,1,1}" {"hint":"Neutral message colour", "widget":"color"}'
+    - '// @input vec4 passColor = "{0.36,1,0.54,1}" {"hint":"Pass (green) message colour", "widget":"color"}'
+    - '// @input vec4 failColor = "{1,0.42,0.42,1}" {"hint":"Fail (coral) message colour", "widget":"color"}'
+    - '// @input vec4 accentColor = "{0.5,0.91,1,1}" {"hint":"Holographic accent colour (badge, Entry / Exit tags)", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

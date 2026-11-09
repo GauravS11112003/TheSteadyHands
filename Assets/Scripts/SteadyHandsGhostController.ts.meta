@@ -1,0 +1,137 @@
+- !<AssetImportMetadata/dc32ad40-25f9-4d77-a78d-2994fcc1db10>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f217b529-d704-4cc5-aab3-eb4e39d7ce7c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f217b529-d704-4cc5-aab3-eb4e39d7ce7c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d8487bec-1234-4cb1-a146-eae9c679b9e9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d8487bec-1234-4cb1-a146-eae9c679b9e9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e720dabd-1572-45bd-ba9f-3ac34fbb512b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    castShadows: false
+    crossSection: false
+    demoSpeed: false
+    driveTiltDeg: false
+    driverHand: false
+    fadeInSec: false
+    fadeOutSec: false
+    forcepsHand: false
+    ghostColor: false
+    haloMaterial: false
+    handMaterial: false
+    handScale: false
+    instrumentMaterial: false
+    leftHandModel: false
+    needleRadius: false
+    pad: false
+    rightHandModel: false
+    shadowDensity: false
+    tEntry: false
+    tEvert: false
+    tExit: false
+    tGrasp: false
+    tPulled: false
+    tReach: false
+    tRelease: false
+    tTight: false
+    tWithdraw: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - driverHand: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      forcepsHand: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightHandModel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftHandModel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      handMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      instrumentMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      haloMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      pad: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      crossSection: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      ghostColor: !<Vec4> {x: 0.620000, y: 0.800000, z: 1.000000, w: 0.550000}
+      handScale: 0.880000
+      castShadows: true
+      shadowDensity: 0.220000
+      driveTiltDeg: !<float> 18.000000
+      needleRadius: 0.650000
+      demoSpeed: !<float> 1.000000
+      fadeInSec: 0.700000
+      tReach: 1.500000
+      tEvert: !<float> 2.000000
+      tEntry: 2.600000
+      tExit: 4.400000
+      tRelease: 4.750000
+      tGrasp: 5.150000
+      tPulled: 6.350000
+      tTight: 7.200000
+      tWithdraw: 7.600000
+      fadeOutSec: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">SteadyHandsGhostController – ghost attending demo stitch</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject driverHand {"hint":"GhostHand_Driver root (origin = needle tip; disabled when idle)"}'
+    - '// @input SceneObject forcepsHand {"hint":"GhostHand_Forceps root (origin = forceps tips; disabled when idle)"}'
+    - '// @input SceneObject rightHandModel {"hint":"Duplicated SIK right hand model (Skin + RightHandRig + RightHandMeshFull) under GhostHand_Driver"}'
+    - '// @input SceneObject leftHandModel {"hint":"Duplicated SIK left hand model (Skin + LeftHandRig + LeftHandMeshFull) under GhostHand_Forceps"}'
+    - '// @input Asset.Material handMaterial {"hint":"GhostHologram_Hand material (hands, sleeves, thread)"}'
+    - '// @input Asset.Material instrumentMaterial {"hint":"GhostHologram_Instrument material (brighter, more specular)"}'
+    - '// @input Asset.Material haloMaterial {"hint":"GhostHalo material (additive bloom shell, inflated along normals)"}'
+    - "// @input AssignableType_1 pad {\"hint\":\"Pad controller (draws the ghost's stitch on the pad)\"}"
+    - '// @input AssignableType_2 crossSection {"hint":"Cross-section controller (draws the 3x ghost trace)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Look</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Look"}'
+    - '// @input vec4 ghostColor = "{0.18,0.77,1,1}" {"hint":"Hologram core colour (ice cyan); alpha = overall strength", "widget":"color"}'
+    - '// @input float handScale = 0.88 {"hint":"Hand scale (1 = SIK model, ~22 cm wrist to fingertip)", "widget":"slider", "min":0.7, "max":1.1, "step":0.01}'
+    - '// @input bool castShadows = true {"hint":"Faint cast shadows from the hands and instruments onto the drape/skin (preview depth cue)"}'
+    - "// @input float shadowDensity = 0.22 {\"hint\":\"Density of those shadows (keep low: it's a hologram)\", \"widget\":\"slider\", \"min\":0, \"max\":1, \"step\":0.01}"
+    - '// @input float driveTiltDeg = 18 {"hint":"Driver shaft tilt (deg): raises the hand side so the instrument is not flat on the drape", "widget":"slider", "min":0, "max":35, "step":1}'
+    - '// @input float needleRadius = 0.65 {"hint":"Needle radius (cm). 3/8 circle; 0.65 → ~1.2 cm chord", "widget":"slider", "min":0.55, "max":1.1, "step":0.01}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Timeline (s at demoSpeed 1)</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Timeline"}'
+    - '// @input float demoSpeed = 1 {"hint":"Playback speed of the demo (1 = default pace)", "widget":"slider", "min":0.1, "max":3, "step":0.05}'
+    - '// @input float fadeInSec = 0.7 {"hint":"Fade-in while reaching in from the far side"}'
+    - '// @input float tReach = 1.5 {"hint":"Instruments arrive over the wound"}'
+    - '// @input float tEvert = 2 {"hint":"Forceps have everted the far wound edge"}'
+    - '// @input float tEntry = 2.6 {"hint":"Needle tip pierces the entry point (pad + cross-section start)"}'
+    - '// @input float tExit = 4.4 {"hint":"Needle tip emerges at the exit point (stitch placed on the pad)"}'
+    - '// @input float tRelease = 4.75 {"hint":"Driver releases the needle"}'
+    - '// @input float tGrasp = 5.15 {"hint":"Forceps grasp the needle tip"}'
+    - '// @input float tPulled = 6.35 {"hint":"Needle pulled through along its curve"}'
+    - '// @input float tTight = 7.2 {"hint":"Thread drawn tight"}'
+    - '// @input float tWithdraw = 7.6 {"hint":"Hands start withdrawing to the far side (fade begins)"}'
+    - '// @input float fadeOutSec = 1 {"hint":"Seconds for the ghost to fade out while withdrawing (brief: about 1 s)", "widget":"slider", "min":0.2, "max":3, "step":0.1}'
+    - '// @ui {"widget":"group_end"}'
